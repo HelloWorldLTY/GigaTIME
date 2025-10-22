@@ -32,6 +32,18 @@ Make sure the extracted folder are located in `./data/`.
 
 ## Pre-trained Model
 
+Model card available in [HuggingFace](https://huggingface.co/prov-gigatime/GigaTIME) 
+
+```
+weights_path = hf_hub_download(
+    repo_id="prov-gigatime/GigaTIME",
+    filename="model.pth"  
+)
+
+state_dict = torch.load(weights_path, map_location='cpu')
+model.load_state_dict(state_dict)
+```
+
 The pre-trained GigaTIME model can be downloaded [here](https://www.dropbox.com/scl/fi/phg4as7s8ayemwg64r27a/model.pth?rlkey=1n9skwtfduq2qdj6c6uor0myv&st=t209twfl&dl=0).
 
 After downloading, move the `model.pth` file to the `models` directory:
