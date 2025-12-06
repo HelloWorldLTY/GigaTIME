@@ -1,6 +1,19 @@
-# Multimodal AI generates virtual population for tumor microenvironment modeling (Cell)
+# GigaTIME: Multimodal AI generates virtual population for tumor microenvironment modeling (Cell)
 
-### Official GigaTIME Codebase
+<div align="center">
+
+[![Paper](https://img.shields.io/badge/Paper-Cell-red.svg)](https://www.cell.com/)
+[![Model](https://img.shields.io/badge/🤗%20Hugging%20Face-Model-yellow)](https://huggingface.co/prov-gigatime/GigaTIME)
+[![License](https://img.shields.io/badge/License-Research%20Only-blue.svg)](#license-notice)
+[![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-EE4C2C.svg?logo=pytorch)](https://pytorch.org/)
+[![Microsoft](https://img.shields.io/badge/Microsoft-Research-00A4EF.svg?logo=microsoft)](https://www.microsoft.com/en-us/research/)
+
+
+*Official implementation of GigaTIME*
+
+[📄 Paper](https://www.cell.com/) • [🤗 Model Card](https://huggingface.co/prov-gigatime/GigaTIME) 
+
+</div>
 
 ## Environment Setup
 
@@ -32,17 +45,26 @@ Make sure the extracted folder are located in `./data/`.
 
 ## Pre-trained Model
 
+Option 1: Load directly from Hugging Face (Recommended)
+
 Model card available in [HuggingFace](https://huggingface.co/prov-gigatime/GigaTIME) 
 
 ```
+from huggingface_hub import hf_hub_download
+import torch
+
+# Download model weights
 weights_path = hf_hub_download(
     repo_id="prov-gigatime/GigaTIME",
     filename="model.pth"  
 )
 
+# Load model
 state_dict = torch.load(weights_path, map_location='cpu')
 model.load_state_dict(state_dict)
 ```
+
+Option 2: Manual download from Dropbox
 
 The pre-trained GigaTIME model can be downloaded [here](https://www.dropbox.com/scl/fi/phg4as7s8ayemwg64r27a/model.pth?rlkey=1n9skwtfduq2qdj6c6uor0myv&st=t209twfl&dl=0).
 
@@ -54,13 +76,20 @@ mv model.pth ./models/
 
 ## Tutorials
 
-- **Inference Tutorial:** Demonstrates loading the model, preparing data, and running inference on sample patches.
+- **Inference Tutorial:** 
+
+Learn how to load the model and run predictions on sample patches:
+
 
     ```
     scripts/gigatime_testing.ipynb
     ```
 
-- **Training Tutorial:** Provides an overview of the training workflow and demonstrates training for one epoch.
+
+- **Training Tutorial:** 
+
+Understand the training workflow with a one-epoch demo:
+
 
     ```
     scripts/gigatime_training.ipynb
@@ -92,4 +121,3 @@ Any deployed use case of the model --- commercial or otherwise --- is out of sco
 
 The model is not intended or made available for clinical use as a medical device, clinical support, diagnostic tool, or other technology intended to be used in the diagnosis, cure, mitigation, treatment, or prevention of disease or other conditions. The model is not designed or intended to be a substitute for professional medical advice, diagnosis, treatment, or judgment and should not be used as such. All users are responsible for reviewing the output of the developed model to determine whether the model meets the user’s needs and for validating and evaluating the model before any clinical use.
 
-## Citation
