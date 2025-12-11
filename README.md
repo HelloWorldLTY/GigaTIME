@@ -109,11 +109,11 @@ The model is not intended or made available for clinical use as a medical device
 ## Citation
 
 ```
-@article{valanarasu2025gigatime,
+@article{valanarasu2025multimodal,
   title={Multimodal AI generates virtual population for tumor microenvironment modeling},
-  author={Valanarasu, Jeya Maria Jose and Xu, Hanwen and Usuyama, Naoto and Kim, Chanwoo and Wong, Cliff and Argaw, Peniel and Ben Shimol, Racheli and Crabtree, Angela and Matlock, Kevin and Bartlett, Alexandra Q. and Bagga, Jaspreet and Gu, Yu and Zhang, Sheng and Naumann, Tristan and Fox, Bernard A. and Wright, Bill and Robicsek, Ari and Piening, Brian and Bifulco, Carlo and Wang, Sheng and Poon, Hoifung},
+  author={Valanarasu, Jeya Maria Jose and Xu, Hanwen and Usuyama, Naoto and Kim, Chanwoo and Wong, Cliff and Argaw, Peniel and Shimol, Racheli Ben and Crabtree, Angela and Matlock, Kevin and Bartlett, Alexandra Q and others},
   journal={Cell},
   year={2025},
-  publisher={Cell Press}
+  publisher={Elsevier}
 }
 ```
